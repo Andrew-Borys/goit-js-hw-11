@@ -14,7 +14,6 @@ formRef.addEventListener('submit', onSearch);
 loadMoreBtnRef.addEventListener('click', onLoadMore);
 
 const imagesApiService = new ImagesApiService();
-// const loadMoreBtn = new LoadMoreBtn('.btn-load-more');
 
 loadMoreBtnRef.classList.add('is-hidden');
 
