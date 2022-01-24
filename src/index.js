@@ -26,7 +26,10 @@ function onSearch(e) {
   imagesApiService.resetPage();
   imagesApiService.getImages().then(images => {
     appendImageMarkUp(images);
-    loadMoreBtnRef.classList.remove('is-hidden');
+
+    if (res.data.total === 0) {
+      loadMoreBtnRef.classList.add('is-hidden');
+    } else loadMoreBtnRef.classList.remove('is-hidden');
   });
 }
 
